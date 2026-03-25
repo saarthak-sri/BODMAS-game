@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BODMAS Master</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="top-bar">
+        <div class="title-wrap">
+          <h1>BODMAS Master</h1>
+          <p>Bus Jam style operation puzzle</p>
+        </div>
+        <div class="status-wrap">
+          <div class="chip">
+            <span>Score</span>
+            <strong id="scoreValue">0</strong>
+          </div>
+          <div class="chip">
+            <span>Level</span>
+            <strong id="levelValue">1 / 4</strong>
+          </div>
+          <div class="chip">
+            <span>Time</span>
+            <strong id="timerValue">00:00</strong>
+          </div>
+          <button id="resetButton" class="btn btn-secondary">Reset</button>
+        </div>
+      </header>
+
+      <main class="game-area">
+        <section class="expression-panel">
+          <h2>Solve in correct BODMAS order</h2>
+          <div id="expressionBoard" class="expression-board"></div>
+        </section>
+      </main>
+
+      <footer class="bottom-panel">
+        <div class="hint-box" id="hintBox">
+          Pick the next operator based on BODMAS: brackets, multiplication/division, addition/subtraction.
+        </div>
+        <div class="instruction-box">
+          <strong>How to play:</strong>
+          Click an operator card. Correct moves resolve with nearby numbers. Wrong moves shake and show hints.
+        </div>
+        <button id="nextLevelButton" class="btn btn-primary hidden">Next Level</button>
+      </footer>
+    </div>
+
+    <canvas id="confettiCanvas"></canvas>
+    <script src="./script.js"></script>
+  </body>
+</html>
